@@ -76,3 +76,37 @@ form input[type="submit"] {
     border-radius: 5px;
     cursor: pointer;
 }
+
+table {
+    width: 50%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white;
+    overflow-y: scroll;
+}
+table, th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #1d4f41;
+    color: white;
+}
+.action-buttons button {
+    padding: 5px 10px;
+    margin: 0 2px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+.edit-button {
+    background-color: #4CAF50;
+}
+.delete-button {
+    background-color: #f44336;
+}
+
+.table-container {
+    overflow-y: auto;
+}

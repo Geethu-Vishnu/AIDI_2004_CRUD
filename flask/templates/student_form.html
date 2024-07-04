@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
-    <form action="/added" method="post" onsubmit="return validateForm()">
+    <form action="/student/new" method="post" onsubmit="return validateForm()">
         <h2>Add Student Data</h2>
         <label for="first_name">First Name:</label><br>
         <input type="text" id="first_name" name="first_name" required><br>
