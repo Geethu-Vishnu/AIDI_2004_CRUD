@@ -1,34 +1,32 @@
 body {
-    font-family: Arial, sans-serif;
+    background: linear-gradient(45deg, #1db954, #191414);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     margin: 0;
-    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: white;
 }
-
 h1 {
-    color: #333;
+    margin-bottom: 20px;
 }
-
+.buttons {
+    display: flex;
+}
 a {
+    display: inline-block;
+    background: white;
+    color: black;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
     text-decoration: none;
-    color: #007bff;
-    margin-right: 10px;
+    font-weight: bold;
+    width: 150px; /* Set the same width for both buttons */
+    text-align: center;
 }
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-table, th, td {
-    border: 1px solid #ddd;
-}
-
-th, td {
-    padding: 8px;
-    text-align: left;
-}
-
-th {
-    background-color: #f2f2f2;
+a:hover {
+    background: #e0e0e0;
 }
