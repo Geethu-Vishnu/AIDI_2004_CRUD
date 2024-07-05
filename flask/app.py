@@ -32,11 +32,11 @@ def index():
 # Show all records
 @app.route('/students')
 def get_students():
-    students = Student.query.all()
+    students = Student.query.order_by(Student.student_id).all()
     return render_template('students.html', students=students)
 
 # Create a student
-@app.route('/student/new', methods=['GET', 'POST'])
+@app.route('/add_student', methods=['GET', 'POST'])
 def add_student():
     if request.method == 'POST':
         data = request.form
@@ -58,7 +58,7 @@ def get_student(student_id):
     return render_template('student_form.html', student=student, update=True)
 
 # Update a student by ID
-@app.route('/student/update/<int:student_id>', methods=['POST'])
+@app.route('/update_student/<int:student_id>', methods=['POST'])
 def update_student(student_id):
     data = request.form
     student = Student.query.get_or_404(student_id)
@@ -68,6 +68,7 @@ def update_student(student_id):
     student.amount_due = data['amount_due']
     db.session.commit()
     return redirect(url_for('get_students'))
+
 
 # Delete a student by ID
 @app.route('/student/delete/<int:student_id>')
